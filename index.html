@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="GERFIN: техническое портфолио с игровыми системами, модами, плагинами, софтом для автоматизации и веб-интерфейсами."
+    />
+    <title>Портфолио // GERFIN</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="boot-pending">
+    <div class="noise-layer" aria-hidden="true"></div>
+    <div class="scanline-layer" aria-hidden="true"></div>
+
+    <div class="intro" id="intro" aria-live="polite">
+      <div class="panel intro__panel" data-reactive>
+        <div class="panel__bar">
+          <span>ЗАГРУЗКА::GERFIN_PORTFOLIO</span>
+          <span>ВХОД В СЕССИЮ</span>
+        </div>
+        <pre class="intro__text" id="introText"></pre>
+        <button class="intro__action" id="introAction" type="button" hidden>
+          НАЖМИТЕ ENTER
+        </button>
+      </div>
+    </div>
+
+    <main class="app" id="app" aria-hidden="true">
+      <header class="hero section" id="top">
+        <nav class="topbar panel" aria-label="Навигация по разделам" data-reactive>
+          <a class="topbar__brand" href="#top">GERFIN://ROOT</a>
+          <div class="topbar__links">
+            <a href="#projects">Проекты</a>
+            <a href="#skills">Навыки</a>
+            <a href="#contacts">Контакты</a>
+          </div>
+        </nav>
+
+        <div class="hero__grid">
+          <section class="hero__copy">
+            <p class="eyebrow">СИСТЕМА // АКТИВНА</p>
+            <h1>GERFIN // ТЕХНИЧЕСКОЕ ПОРТФОЛИО</h1>
+            <p class="hero__subtitle">
+              Игровые системы, моды, плагины, софт для автоматизации и веб-интерфейсы.
+            </p>
+
+            
+          </section>
+        </div>
+      </header>
+
+      <section class="section section--skills" id="skills">
+        <div class="section__heading">
+          
+          <h2>Направления</h2>
+        </div>
+
+        <div class="skills-grid">
+          <article class="skill-card" data-reactive data-status="АКТИВНО">
+            <p class="skill-card__platform">Minecraft</p>
+            <h3>Разработка плагинов</h3>
+            <p>События сервера, кастомные системы и управляющая логика.</p>
+            <div class="skill-card__meta">
+              <span>АКТИВНО</span>
+            </div>
+          </article>
+
+          <article class="skill-card" data-reactive data-status="АКТИВНО">
+            <p class="skill-card__platform">Minecraft / Terraria</p>
+            <h3>Разработка модов и модпаков</h3>
+            <p>Кастомные механики, баланс, совместимость и системы, включенные в моды.</p>
+            <div class="skill-card__meta">
+              <span>АКТИВНО</span>
+            </div>
+          </article>
+
+          <article class="skill-card" data-reactive data-status="АКТИВНО">
+            <p class="skill-card__platform">Roblox</p>
+            <h3>Создание игр в Roblox вместе с механиками</h3>
+            <p>Игровые структуры, системы способностей, взаимодействия и полная логика проекта.</p>
+            <div class="skill-card__meta">
+              <span>АКТИВНО</span>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section section--projects" id="projects">
+        <div class="section__heading section__heading--split">
+          <div>
+            <p class="eyebrow">МЕДИА-ВИТРИНА</p>
+            <h2>Проекты / Галерея</h2>
+          </div>
+          <p class="section__note" id="projectCount">09 модулей видно</p>
+        </div>
+
+        <div class="filter-bar panel" data-reactive>
+          <button class="filter-button is-active" data-filter="All" type="button">Все</button>
+          <button class="filter-button" data-filter="Minecraft" type="button">Minecraft</button>
+          <button class="filter-button" data-filter="Roblox" type="button">Roblox</button>
+          <button class="filter-button" data-filter="Terraria" type="button">Terraria</button>
+        </div>
+
+        <div class="project-grid" id="projectGrid"></div>
+      </section>
+
+      <section class="section section--contacts" id="contacts">
+        <div class="section__heading">
+          <p class="eyebrow">ПРЯМАЯ СВЯЗЬ</p>
+          <h2>Контакты</h2>
+        </div>
+
+        <div class="contacts-shell panel" data-reactive>
+          <div class="panel__bar">
+            <span>ТЕРМИНАЛ_СВЯЗИ</span>
+            <span>ОТКРЫТО</span>
+          </div>
+
+          <div class="contacts-shell__content">
+            <pre class="contacts-shell__log" id="contactLog">&gt; КАНАЛЫ СВЯЗИ:
+&gt; TELEGRAM: @gerfin228
+&gt; DISCORD: gerfinnn</pre>
+
+            <div class="contacts-shell__actions">
+              <button class="action-button action-button--ghost" data-copy="@gerfin228" type="button">
+                Копировать Telegram
+              </button>
+              <button class="action-button action-button--ghost" data-copy="gerfinnn" type="button">
+                Копировать Discord
+              </button>
+            </div>
+
+            <p class="contacts-shell__status" id="copyStatus">ОЖИДАНИЕ КОМАНДЫ</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div class="lightbox" id="lightbox" aria-hidden="true" role="dialog" aria-modal="true">
+      <div class="lightbox__backdrop" data-close-lightbox></div>
+      <div class="lightbox__panel panel" data-reactive>
+        <div class="panel__bar">
+          <span>ПРОСМОТР_МЕДИА</span>
+          <button class="lightbox__close" id="lightboxClose" type="button" aria-label="Закрыть просмотр">
+            ЗАКРЫТЬ
+          </button>
+        </div>
+
+        <div class="lightbox__layout">
+          <button class="lightbox__nav lightbox__nav--prev" id="lightboxPrev" type="button" aria-label="Предыдущий проект">
+            НАЗАД
+          </button>
+
+          <div class="lightbox__content">
+            <div class="lightbox__media" id="lightboxMedia"></div>
+            <div class="lightbox__meta">
+              <p class="lightbox__type" id="lightboxType"></p>
+              <h3 id="lightboxTitle"></h3>
+              <p id="lightboxDescription"></p>
+            </div>
+          </div>
+
+          <button class="lightbox__nav lightbox__nav--next" id="lightboxNext" type="button" aria-label="Следующий проект">
+            ВПЕРЁД
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
